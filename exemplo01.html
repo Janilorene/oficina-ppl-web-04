@@ -22,7 +22,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 30rem;
+            width: 40rem;
             min-height: 25rem;
             margin: 1rem auto;
             border: 1px solid purple;
@@ -39,8 +39,14 @@
             color:pink;
         }
 
-        .produto-preco {
-            padding: 2rem;
+        .alerta {
+            background-color: white;
+            color: rgb(243, 20, 57);
+            
+        }
+
+        .produto, .preco, .alerta {
+            padding: 3rem;
             width: 8rem;
             height: 8rem;
             border-radius: .5rem;
@@ -48,7 +54,10 @@
             margin: 1rem;
             box-shadow: .5rem .5rem .3rem .01rem gray;
             text-align: center;
+            align-content: center;
         }
+
+        
     </style>
 </head>
 
@@ -67,23 +76,23 @@
 
             switch (produto.toLowerCase()) {
                 case "arroz":
-                    document.write("<div class='produto produto-preco'> Você comprou arroz <br> </div>");
-                    document.write("<div class='preco produto-preco'>Preço: R$8,97 <br></div>");
+                    document.write("<div class='produto'> Você comprou arroz <br> </div>");
+                    document.write("<div class='preco'>Preço: R$8,97 <br></div>");
                     break;
                 case "feijao":
-                    document.write("Você digitou errado <br>");
+                    document.write("<div class='alerta'> Você digitou errado! <br></div>");
                 case "feijão":
-                    document.write("<div class='produto produto-preco'> Você comprou feijão <br> </div>");
-                    document.write("<div class='preco produto-preco'>Preço: R$7,89 <br></div>");
+                    document.write("<div class='produto'> Você comprou feijão <br> </div>");
+                    document.write("<div class='preco'>Preço: R$7,89 <br></div>");
                     break;
                 case "cafe":
-                    document.write("Você digitou errado <br>");
+                    document.write("<div class='alerta'> Você digitou errado! <br></div>");
                 case "café":
-                    document.write("<div class='produto produto-preco'> Você comprou café <br> </div>");
-                    document.write("<div class='preco produto-preco'>Preço: R$18,45 <br></div>");
+                    document.write("<div class='produto'> Você comprou café <br> </div>");
+                    document.write("<div class='preco'>Preço: R$18,45 <br></div>");
                     break;
                 default:
-                    document.write("Produto inválido! <br>");
+                    document.write("<div class='alerta'>Produto inválido! <br></div>");
             }
         </script>
     </div>
