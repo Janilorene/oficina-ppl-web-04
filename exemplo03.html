@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo 02</title>
+    <title>Exemplo 03</title>
     <style>
         * {
             font-size: 16px;
@@ -51,22 +51,23 @@
 </head>
 
 <body>
-    <h1>Estrutura de Repetição: while</h1>
+    <h1>Estrutura de Repetição: do-while</h1>
 
     <div class="container">
         <script>
             /* 
-               Estrutura de repetição while
+               Estrutura de repetição do-while
                Variavel
                Entrada e saída de dados 
             */
 
-            var i=0, num = parseInt(prompt("Informe um número:"));
+            var i =0, num = parseInt(prompt("Informe um número:"));
 
-            while(i < num){
+            do{
                 document.write(`<div class="mensagem"> ${i} <br></div>`);
                 i++;
-            }
+            }while(i < num);
+
         </script>
     </div>
 

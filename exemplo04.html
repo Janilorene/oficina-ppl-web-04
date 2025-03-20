@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo 02</title>
+    <title>Exemplo 04</title>
     <style>
         * {
             font-size: 16px;
@@ -37,13 +37,12 @@
             padding: 1rem;
             width: 8rem;
             height: 8rem;
-            border-radius: 100%;
+            border-radius: .5rem;
             font-weight: bold;
             margin: 1rem;
             box-shadow: .5rem .5rem .3rem .01rem gray;
             text-align: center;
             align-content: center;
-            font-size: 3rem;
         }
 
         
@@ -51,22 +50,29 @@
 </head>
 
 <body>
-    <h1>Estrutura de Repetição: while</h1>
+    <h1>Estrutura de Repetição: do-while</h1>
 
     <div class="container">
         <script>
             /* 
-               Estrutura de repetição while
+               Estrutura de repetição do-while
                Variavel
                Entrada e saída de dados 
             */
 
-            var i=0, num = parseInt(prompt("Informe um número:"));
+            var opcao, num;
 
-            while(i < num){
-                document.write(`<div class="mensagem"> ${i} <br></div>`);
-                i++;
-            }
+            do{
+                num = parseInt(prompt("Informe um número:"));
+                if(num % 2 == 0){
+                    document.write(`<div class="mensagem"> O número ${num} é par <br></div>`);
+                } else{
+                    document.write(`<div class="mensagem"> O número ${num} é ímpar <br></div>`);
+                    opcao = confirm("Deseja informar outro número?");
+                }
+            
+            }while(opcao == true);
+
         </script>
     </div>
 
