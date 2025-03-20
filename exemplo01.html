@@ -5,39 +5,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo 01</title>
+    <style>
+        * {
+            font-size: 16px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            width: 30rem;
+            margin: 1rem auto;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30rem;
+            min-height: 25rem;
+            margin: 1rem auto;
+            border: 1px solid purple;
+            box-shadow: .5rem .5rem .3rem .01rem purple;
+        }
+
+        .produto {
+            background-color: pink;
+            color:white;
+        }
+
+        .preco {
+            background-color: white;
+            color:pink;
+        }
+
+        .produto-preco {
+            padding: 2rem;
+            width: 8rem;
+            height: 8rem;
+            border-radius: .5rem;
+            font-weight: bold;
+            margin: 1rem;
+            box-shadow: .5rem .5rem .3rem .01rem gray;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-    <script>
-        /* 
-           Estrutura condicional (seleção)
-           Variavel
-           Entrada e saída de dados 
-        */
+    <h1>Tabela de Preços</h1>
 
-        var produto = prompt("Informe o produto: <br>");
+    <div class="container">
+        <script>
+            /* 
+               Estrutura condicional (seleção)
+               Variavel
+               Entrada e saída de dados 
+            */
 
-        switch (produto.toLowerCase()) {
-            case "arroz":
-                document.write("Você comprou arroz <br>");
-                document.write("Preço: R$8,97 <br>");
-                break;
-            case "feijao":
-                document.write("Você digitou errado <br>");
-            case "feijão":
-                document.write("Você comprou feijão <br>");
-                document.write("Preço: R$7,89 <br>");
-                break;
-            case "cafe":
-                document.write("Você digitou errado <br>");
-            case "café":
-                document.write("Você comprou café <br>");
-                document.write("Preço: R$18,45 <br>");
-                break;
-            default:
-                document.write("Produto inválido! <br>");
-        }
-    </script>
+            var produto = prompt("Informe o produto:");
+
+            switch (produto.toLowerCase()) {
+                case "arroz":
+                    document.write("<div class='produto produto-preco'> Você comprou arroz <br> </div>");
+                    document.write("<div class='preco produto-preco'>Preço: R$8,97 <br></div>");
+                    break;
+                case "feijao":
+                    document.write("Você digitou errado <br>");
+                case "feijão":
+                    document.write("<div class='produto produto-preco'> Você comprou feijão <br> </div>");
+                    document.write("<div class='preco produto-preco'>Preço: R$7,89 <br></div>");
+                    break;
+                case "cafe":
+                    document.write("Você digitou errado <br>");
+                case "café":
+                    document.write("<div class='produto produto-preco'> Você comprou café <br> </div>");
+                    document.write("<div class='preco produto-preco'>Preço: R$18,45 <br></div>");
+                    break;
+                default:
+                    document.write("Produto inválido! <br>");
+            }
+        </script>
+    </div>
 
 </body>
 
